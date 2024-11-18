@@ -38,7 +38,7 @@
       lidSwitch = "suspend";
       lidSwitchExternalPower = "hibernate";
       extraConfig = ''
-        HandlePowerKey=suspend
+        HandlePowerKey=poweroff
         HibernateDelaySec=600
         SuspendState=mem
       '';

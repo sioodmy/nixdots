@@ -1,13 +1,13 @@
 {pkgs, ...}: let
   settings = {
     layer = "top";
-    position = "left";
-    width = 55;
+    position = "top";
+    height = 32;
     spacing = 7;
     fixed-center = false;
-    margin-left = 6;
-    margin-top = 9;
-    margin-bottom = 9;
+    margin-left = null;
+    margin-top = null;
+    margin-bottom = null;
     margin-right = null;
     exclusive = true;
     modules-left = [
@@ -17,11 +17,7 @@
       "backlight"
       "battery"
     ];
-    modules-center = [
-      "custom/weather"
-      "clock"
-    ];
-    modules-right = ["pulseaudio" "network" "custom/power"];
+    modules-right = ["pulseaudio" "network" "clock"];
 
     "custom/search" = {
       format = " ";
@@ -35,16 +31,14 @@
       format = "󰐥";
     };
     clock = {
-      format = ''
-        {:%H
-        %M}'';
+      format = "{:%H:%M}";
       tooltip-format = ''
         <big>{:%Y %B}</big>
         <tt><small>{calendar}</small></tt>'';
     };
 
     backlight = {
-      format = "{icon}";
+      format = "{icon} {percent}%";
       format-icons = ["" "" "" "" "" "" "" "" ""];
     };
     cpu = {
@@ -56,19 +50,17 @@
         warning = 30;
         critical = 15;
       };
-      format = "{icon}";
-      format-charging = "󰂄";
-      format-plugged = "󰂄";
-      tooltip-format = "{timeTo} | {capacity}%";
+      format = "{icon} {capacity}%";
+      format-charging = "󰂄 {capacity}%";
+      format-plugged = "󰂄 {capacity}%";
       format-alt = "{icon}";
       format-icons = ["󰂃" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
     };
     pulseaudio = {
       scroll-step = 5;
       tooltip = true;
-      tooltip-format = "{volume}";
       on-click = "${pkgs.killall}/bin/killall pavucontrol || ${pkgs.pavucontrol}/bin/pavucontrol";
-      format = "{icon}";
+      format = "{icon}  {volume}%";
       format-muted = "󰝟 ";
       format-icons = {
         default = ["" "" " "];
@@ -77,7 +69,7 @@
     network = let
       nm-editor = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
     in {
-      format-wifi = "󰤨";
+      format-wifi = "󰤨 {essid}";
       format-ethernet = "󰈀";
       format-alt = "󱛇";
       format-disconnected = "󰤭";

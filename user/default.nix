@@ -8,6 +8,7 @@ theme: rec
       zsh = callPackage ./zsh {};
       foot = callPackage ./foot {inherit theme;};
       tofi = callPackage ./tofi {inherit theme;};
+      anyrun = callPackage ./anyrun {inherit theme;};
       waybar = callPackage ./waybar {inherit pkgs;};
       mako = callPackage ./mako {inherit theme;};
     }
@@ -16,7 +17,13 @@ theme: rec
   shell = pkgs:
     pkgs.mkShell {
       name = "sioodmy-devshell";
-      buildInputs = builtins.attrValues (packages pkgs);
+      buildInputs = builtins.attrValues {
+        inherit
+          (packages pkgs)
+          nvim
+          zsh
+          ;
+      };
     };
   module = {pkgs, ...}: {
     config = {

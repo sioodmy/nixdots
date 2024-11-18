@@ -15,12 +15,6 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  homix.".config/kanshi/config".text = ''
-    profile {
-      output eDP-1 enable scale 1.5
-    }
-  '';
-
   hardware.asahi = {
     enable = true;
     extractPeripheralFirmware = true;
