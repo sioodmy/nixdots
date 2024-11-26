@@ -1,9 +1,12 @@
 {pkgs, ...}: {
-  services.networkd-dispatcher.enable = true;
-
+  services = {
+    networkd-dispatcher.enable = true;
+    pcscd.enable = true;
+    yubikey-touch-detector.enable = true;
+  };
   security = {
-    protectKernelImage = true;
-    lockKernelModules = true;
+    protectKernelImage = false;
+    lockKernelModules = false;
     forcePageTableIsolation = true;
     polkit.enable = true;
 

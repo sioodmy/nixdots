@@ -9,7 +9,7 @@ theme: rec
       foot = callPackage ./foot {inherit theme;};
       tofi = callPackage ./tofi {inherit theme;};
       anyrun = callPackage ./anyrun {inherit theme;};
-      waybar = callPackage ./waybar {inherit pkgs;};
+      waybar = callPackage ./waybar {inherit theme;};
       mako = callPackage ./mako {inherit theme;};
     }
     // (import ./misc-scripts {inherit pkgs;});

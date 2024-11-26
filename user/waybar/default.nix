@@ -1,6 +1,10 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  theme,
+  ...
+}: let
   config = import ./waybar-conf.nix pkgs;
-  style = import ./style.nix pkgs;
+  style = import ./style.nix {inherit pkgs theme;};
 in
   pkgs.symlinkJoin {
     name = "waybar-wrapped";

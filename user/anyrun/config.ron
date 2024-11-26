@@ -7,7 +7,7 @@ Config(
   hide_plugin_info: true, 
   close_on_click: true,
   show_results_immediately: true,
-  max_entries: None,
+  max_entries: Some(5),
   
   plugins: [
     "libapplications.so",

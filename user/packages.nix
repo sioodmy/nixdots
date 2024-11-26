@@ -4,6 +4,12 @@ in {
   environment.systemPackages = attrValues {
     inherit
       (pkgs)
+      # for hyprland
+      
+      swaybg
+      grimblast
+      ##
+      
       wl-clipboard
       hyprlock
       brightnessctl

@@ -14,6 +14,7 @@
     device = "/dev/disk/by-label/NIXCRYPT";
     preLVM = true;
     allowDiscards = true;
+    #    crypttabExtraOpts = ["fido2-device=auto" "token-timeout=10"];
   };
 
   fileSystems."/" = {

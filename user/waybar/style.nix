@@ -1,4 +1,7 @@
-pkgs: let
+{
+  pkgs,
+  theme,
+}: let
   snowflake = builtins.fetchurl rec {
     name = "Logo-${sha256}.svg";
     url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg";
@@ -12,8 +15,8 @@ in
     }
 
     window#waybar {
-      background-color: #181825;
-      color: #cdd6f4;
+      background-color: #${theme.base01};
+      color: #${theme.base05};
       box-shadow: 3px 2px 3px 2px #151515;
       font-size: 13px;
       /* transition-property: background-color; */
@@ -31,7 +34,7 @@ in
 
     .module{
       border-radius: 10px;
-      background-color: #1e1e2e;
+      background-color: #${theme.base00};
       padding: 0px 8px;
     }
 
@@ -43,28 +46,10 @@ in
       padding-left: 20px;
     }
 
-    #custom-swallow {
-      color: #94e2d5;
-    }
-
-    #custom-crypto {
-      color: #89b4fa;
-    }
-
-    #custom-lock {
-        color: #89b4fa;
-    }
-
-    #workspaces button:hover {
-      color: #b4befe;
-      box-shadow: inherit;
-      text-shadow: inherit;
-    }
-
     #workspaces button {
       background-color: transparent;
       /* Use box-shadow instead of border so the text isn't offset */
-      color: #89b4fa;
+      color: #${theme.base0D};
       padding-left: 6px;
       margin: 0px 7px;
       box-shadow: inset 0 -3px transparent;
@@ -72,19 +57,15 @@ in
     }
 
     #workspaces button.active {
-      color: #f9e2af;
+      color: #${theme.base0A};
       transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
     }
     #workspaces button.urgent {
-      background-color: #eba0ac;
+      background-color: #${theme.base09};
     }
     #custom-vpn,
     #network {
-      color: #ca9ee6;
-    }
-
-    #cpu {
-      color: #ef9f76;
+      color: #${theme.base0E};
     }
 
     #clock {
@@ -94,20 +75,20 @@ in
     }
 
     #backlight {
-      color: #f9e2af;
+      color: #${theme.base0A};
     }
 
     #pulseaudio,
     #battery {
-      color: #a6e3a1;
+      color: #${theme.base0B};
     }
 
     #battery.warning {
-      color: #fab387;
+      color: #${theme.base09};
     }
 
     #battery.critical:not(.charging) {
-      color: #f38ba8;
+      color: #${theme.base08};
     }
     tooltip {
       font-family: 'Lato', sans-serif;
