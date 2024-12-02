@@ -1,9 +1,9 @@
 {
-    "nord-nvim": {
+    "theme": {
         "cargoLocks": null,
         "date": "2024-06-16",
         "extract": null,
-        "name": "nord-nvim",
+        "name": "theme",
         "passthru": null,
         "pinned": false,
         "src": {

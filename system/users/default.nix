@@ -1,6 +1,7 @@
 {
   flake,
   pkgs,
+  config,
   ...
 }: {
   users = {
@@ -54,17 +55,19 @@
         enable = true;
         settings.authfile = builtins.toFile "pamu2cfg" "sioodmy:O38Cg9cbBLEdYUTi8NGDamjrrMsXwB+HGvJeit2AmOa5EyBsdBuSTtwh+/z5TNkv9UgaWBjSGNlJh1vsbhiLPA==,5A49VpssDYhzK98R4Sy8GKFn1gR/4feJT9l+sPMLjgiyweeLJHOqcwn49U4AFT2qb8EBwxQ1Ma8sAHQqtXyN5g==,es256,+presence";
       };
-      services = {
+      services = let
+        fprint = ! config.hardware.asahi.enable;
+      in {
         login = {
           enableGnomeKeyring = true;
-          fprintAuth = true;
+          fprintAuth = fprint;
           u2fAuth = true;
         };
         sudo = {
-          fprintAuth = true;
+          fprintAuth = fprint;
           u2fAuth = true;
         };
-        hyprlock.fprintAuth = true;
+        hyprlock.fprintAuth = fprint;
       };
 
       loginLimits = [

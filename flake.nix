@@ -2,8 +2,7 @@
   description = "Consequence of allowing autistic people on the internet. Stay mad one-proper-config-structure purists :3";
 
   outputs = inputs @ {nixpkgs, ...}: let
-    theme = import ./theme;
-    user = import ./user theme;
+    user = import ./user;
 
     forAllSystems = nixpkgs.lib.genAttrs [
       "aarch64-linux"
@@ -15,8 +14,7 @@
     packages = forAllSystems (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
-      in
-        user.packages pkgs
+      in (user.packages pkgs)
     );
 
     formatter = forAllSystems (
@@ -48,9 +46,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    apple-silicon-support = {
-      url = "github:tpwrules/nixos-apple-silicon";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    apple-silicon-support.url = "github:tpwrules/nixos-apple-silicon";
   };
 }

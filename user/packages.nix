@@ -7,6 +7,7 @@ in {
       # for hyprland
       
       swaybg
+      hyprsunset
       grimblast
       ##
       

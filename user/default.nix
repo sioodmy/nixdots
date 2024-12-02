@@ -1,18 +1,18 @@
-theme: rec
+rec
 {
+  theme = import ./theme;
   packages = pkgs: let
     inherit (pkgs) callPackage;
-  in
-    {
-      nvim = callPackage ./nvim {inherit theme;};
-      zsh = callPackage ./zsh {};
-      foot = callPackage ./foot {inherit theme;};
-      tofi = callPackage ./tofi {inherit theme;};
-      anyrun = callPackage ./anyrun {inherit theme;};
-      waybar = callPackage ./waybar {inherit theme;};
-      mako = callPackage ./mako {inherit theme;};
-    }
-    // (import ./misc-scripts {inherit pkgs;});
+    theme = import ./theme pkgs;
+  in {
+    nvim = callPackage ./wrapped/nvim {inherit theme;};
+    zsh = callPackage ./wrapped/zsh {};
+    foot = callPackage ./wrapped/foot {inherit theme;};
+    tofi = callPackage ./wrapped/tofi {inherit theme;};
+    anyrun = callPackage ./wrapped/anyrun {inherit theme;};
+    waybar = callPackage ./wrapped/waybar {inherit theme;};
+    mako = callPackage ./wrapped/mako {inherit theme;};
+  };
 
   shell = pkgs:
     pkgs.mkShell {
@@ -28,10 +28,10 @@ theme: rec
   module = {pkgs, ...}: {
     config = {
       environment.systemPackages = builtins.attrValues (packages pkgs);
+      programs.hyprland.enable = true;
     };
     imports = [
       ./packages.nix
-      ./hyprland
       ./git
       ./gtk
     ];

@@ -20,7 +20,7 @@
       # from nixos modules, so it's a little bit cleaner
       specialArgs = {
         inherit inputs;
-        theme = import ../theme;
+        theme = (import ../user).theme nixpkgs.legacyPackages.${system};
         flake = self;
       };
     };

@@ -19,15 +19,15 @@
   };
   neotree = {
     pname = "neotree";
-    version = "a77af2e764c5ed4038d27d1c463fa49cd4794e07";
+    version = "42caaf5c3b7ca346ab278201151bb878006a6031";
     src = fetchFromGitHub {
       owner = "nvim-neo-tree";
       repo = "neo-tree.nvim";
-      rev = "a77af2e764c5ed4038d27d1c463fa49cd4794e07";
+      rev = "42caaf5c3b7ca346ab278201151bb878006a6031";
       fetchSubmodules = false;
-      sha256 = "sha256-Lqt0KJNT9HmpJwZoWChYeVBrDWhscRe8COqVCwgcTwk=";
+      sha256 = "sha256-3wRojpFbdjcRQPv62/mHqQgyfytTqaBcsX1X0zCNgC8=";
     };
-    date = "2024-09-16";
+    date = "2024-11-24";
   };
   nvim-base-16 = {
     pname = "nvim-base-16";

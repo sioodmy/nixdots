@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  hardware.ledger.enable = true;
   services = {
     networkd-dispatcher.enable = true;
     pcscd.enable = true;

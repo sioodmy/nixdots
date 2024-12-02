@@ -15,8 +15,8 @@ in
     }
 
     window#waybar {
-      background-color: #${theme.base01};
-      color: #${theme.base05};
+      background-color: #${theme.background};
+      color: #${theme.text};
       box-shadow: 3px 2px 3px 2px #151515;
       font-size: 13px;
       /* transition-property: background-color; */
@@ -34,7 +34,7 @@ in
 
     .module{
       border-radius: 10px;
-      background-color: #${theme.base00};
+      background-color: #${theme.regular.background};
       padding: 0px 8px;
     }
 
@@ -49,23 +49,24 @@ in
     #workspaces button {
       background-color: transparent;
       /* Use box-shadow instead of border so the text isn't offset */
-      color: #${theme.base0D};
+      color: #${theme.regular.blue};
       padding-left: 6px;
       margin: 0px 7px;
+      font-family: JetBrains Mono Nerd Font;
       box-shadow: inset 0 -3px transparent;
       transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
     }
 
     #workspaces button.active {
-      color: #${theme.base0A};
+      color: #${theme.regular.yellow};
       transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
     }
     #workspaces button.urgent {
-      background-color: #${theme.base09};
+      color: #${theme.regular.red};
     }
     #custom-vpn,
     #network {
-      color: #${theme.base0E};
+      color: #${theme.regular.blue};
     }
 
     #clock {
@@ -75,20 +76,20 @@ in
     }
 
     #backlight {
-      color: #${theme.base0A};
+      color: #${theme.regular.yellow};
     }
 
     #pulseaudio,
     #battery {
-      color: #${theme.base0B};
+      color: #${theme.regular.green};
     }
 
     #battery.warning {
-      color: #${theme.base09};
+      color: #${theme.regular.red};
     }
 
     #battery.critical:not(.charging) {
-      color: #${theme.base08};
+      color: #${theme.bright.red};
     }
     tooltip {
       font-family: 'Lato', sans-serif;
