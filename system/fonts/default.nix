@@ -22,11 +22,10 @@ in {
           noto-fonts
           noto-fonts-cjk-sans
           noto-fonts-emoji
-          jetbrains-mono
           ;
       }
       ++ [
-        (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
+        pkgs.nerd-fonts.jetbrains-mono
       ];
 
     enableDefaultPackages = false;
