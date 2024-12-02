@@ -16,7 +16,7 @@ in rec {
   # imagine using mp3
   ytopus = "yt-dlp -x --embed-metadata --audio-quality 0 --audio-format opus --embed-metadata --embed-thumbnail";
 
-  cat = "${getExe pkgs.bat} --plain";
+  cat = "bat --plain";
 
   kys = "shutdown now";
 

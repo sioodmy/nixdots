@@ -46,6 +46,8 @@ pkgs: rec {
   accent = regular.blue;
   wallpaper = ./wall.jpg;
 
+  bat = "Nord";
+
   nvim = {
     enable = true;
     # uses generated base16 them if set to false

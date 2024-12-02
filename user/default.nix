@@ -12,6 +12,7 @@ rec
     anyrun = callPackage ./wrapped/anyrun {inherit theme;};
     waybar = callPackage ./wrapped/waybar {inherit theme;};
     mako = callPackage ./wrapped/mako {inherit theme;};
+    bat = callPackage ./wrapped/bat {inherit theme;};
   };
 
   shell = pkgs:
