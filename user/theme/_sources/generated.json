@@ -1,0 +1,22 @@
+{
+    "nord-nvim": {
+        "cargoLocks": null,
+        "date": "2024-06-16",
+        "extract": null,
+        "name": "nord-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "andersevenrud",
+            "repo": "nordic.nvim",
+            "rev": "c88388b2a5f6e621df2718c316b856d4971bb89d",
+            "sha256": "sha256-ipmt0xD2zTfoh8fyYG4+09uVL2ef98FE9VwWpWJtQks=",
+            "type": "github"
+        },
+        "version": "c88388b2a5f6e621df2718c316b856d4971bb89d"
+    }
+}

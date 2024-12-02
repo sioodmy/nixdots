@@ -1,4 +1,10 @@
-{...}: {
+{
+  lib,
+  config,
+  ...
+}: let
+  inherit (lib) mkIf;
+in {
   networking = {
     nameservers = ["127.0.0.1" "::1"];
     dhcpcd.extraConfig = "nohook resolv.conf";
@@ -7,7 +13,7 @@
       unmanaged = ["docker0" "rndis0"];
       dns = "none";
       wifi = {
-        macAddress = "random";
+        macAddress = mkIf (! config.hardware.asahi.enable) "random";
         powersave = true;
       };
     };

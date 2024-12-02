@@ -1,0 +1,3 @@
+[nord-nvim]
+src.git = "https://github.com/andersevenrud/nordic.nvim"
+fetch.github = "andersevenrud/nordic.nvim"
