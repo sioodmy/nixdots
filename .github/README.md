@@ -1,5 +1,9 @@
 # Nixus
 
+<div align="center">
+  <img src="ss.png" alt="screenshot of my setup" width="600" />
+</div>
+
 ## About
 
 This repo contains my reorganized and rewritten NixOS configuration.
