@@ -154,7 +154,7 @@ in {
       "${mod}, k, movefocus, u"
       "${mod}, j, movefocus, d"
 
-      "${mod} SHIFT, s, exec, grimblast --notify copysave area"
+      "${mod} SHIFT, s, exec, grimblast --notify copy area"
 
       "${mod}, bracketleft, workspace, m-1"
       "${mod}, bracketright, workspace, m+1"
