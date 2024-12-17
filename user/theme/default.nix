@@ -44,7 +44,7 @@ pkgs: rec {
   base0F = "B48EAD";
 
   accent = regular.blue;
-  wallpaper = ./wall.jpg;
+  wallpaper = ./wall.png;
 
   bat = "Nord";
 
@@ -54,6 +54,15 @@ pkgs: rec {
 
     package = pkgs.vimPlugins.nord-nvim;
     name = "nord";
+    configExtra = ''
+      -- Fix HTML highlight
+      vim.cmd [[highlight @tag gui=bold guifg=#81A1C1]]
+      vim.cmd [[highlight @tag.delimiter gui=bold guifg=#616E88]]
+      vim.cmd [[highlight @tag.attribute guifg=#B48EAD]]
+
+      -- Fix elixir syntax
+      vim.cmd [[highlight @function gui=italic guifg=#81A1C1]]
+    '';
   };
 
   gtk = {

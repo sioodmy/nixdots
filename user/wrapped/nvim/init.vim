@@ -22,6 +22,12 @@ set shiftwidth=4
 set splitright
 set splitbelow
 
+highlight @tag gui=bold guifg=#81A1C1
+highlight @tag.delimiter gui=bold guifg=#616E88
+highlight @tag.attribute guifg=#B48EAD
+
+highlight @function gui=italic guifg=#81A1C1
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader><leader> <cmd>Telescope git_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>

@@ -13,6 +13,7 @@ rec
     waybar = callPackage ./wrapped/waybar {inherit theme;};
     mako = callPackage ./wrapped/mako {inherit theme;};
     bat = callPackage ./wrapped/bat {inherit theme;};
+    hypr = callPackage ./wrapped/hypr {inherit theme;};
   };
 
   shell = pkgs:
@@ -30,6 +31,7 @@ rec
     config = {
       environment.systemPackages = builtins.attrValues (packages pkgs);
       programs.hyprland.enable = true;
+      programs.direnv.enable = true;
     };
     imports = [
       ./packages.nix

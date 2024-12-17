@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  flake,
+  ...
+}: {
   hardware.graphics.enable = true;
 
   environment.sessionVariables = {
@@ -25,7 +29,7 @@
       enable = true;
       settings = rec {
         initial_session = {
-          command = "Hyprland";
+          command = "${flake.packages.${pkgs.system}.hypr}/bin/Hyprland";
           user = "sioodmy";
         };
         default_session = initial_session;

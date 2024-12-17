@@ -17,6 +17,7 @@
 
       vim.cmd[[colorscheme ${theme.nvim.name}]]
 
+      ${theme.nvim.configExtra}
     ''
     else ''
 
@@ -70,7 +71,6 @@
           fidget-nvim
           nvim-notify
           # Language support
-          
           nvim-lspconfig
           nvim-cmp
           friendly-snippets
@@ -95,17 +95,18 @@ in
         (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped neovimConfig)
 
         pkgs.nodePackages.typescript-language-server
-        pkgs.nodePackages.prettier
       ]
       ++ attrValues {
         inherit
           (pkgs)
           gopls
+          prettierd
           go
           nil
           rust-analyzer
           alejandra
           vscode-langservers-extracted
+          emmet-language-server
           bash-language-server
           zls
           gleam
@@ -115,7 +116,6 @@ in
           nixd
           stylua
           # required for my goofy ahh plugin :3
-          
           libsixel
           ;
       };

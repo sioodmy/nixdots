@@ -1,4 +1,4 @@
-{lib}: {
+lib: {
   attrs,
   indentLevel ? 0,
   importantPrefixes ? ["$"],
