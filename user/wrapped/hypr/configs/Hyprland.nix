@@ -131,8 +131,8 @@ in {
     ", XF86AudioLowerVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
 
     # backlight
-    ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
-    ", XF86MonBrightnessDown, exec, brillo -q -u 300000 -U 5"
+    ", XF86MonBrightnessUp, exec, brillo -q -A 5"
+    ", XF86MonBrightnessDown, exec, brillo -q -U 5"
   ];
   bind =
     [
