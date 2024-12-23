@@ -113,6 +113,8 @@ in
           clang-tools
           shellcheck
           cargo
+          cargo-tauri
+          trunk
           nixd
           stylua
           # required for my goofy ahh plugin :3

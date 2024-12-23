@@ -7,7 +7,7 @@
 
   staypls = {
     enable = true;
-    dirs = ["/etc/ssh" "/etc/NetworkManager" "/etc/nix" "/var/lib/fprint" "/var/lib/pipewire"];
+    dirs = ["/etc/ssh" "/etc/NetworkManager" "/etc/nix" "/var/lib/fprint" "/var/lib/pipewire" "/var/lib/bluetooth"];
   };
 
   boot.initrd.luks.devices.luksroot = {

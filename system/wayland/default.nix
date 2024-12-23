@@ -3,7 +3,10 @@
   flake,
   ...
 }: {
-  hardware.graphics.enable = true;
+  hardware = {
+    graphics.enable = true;
+    brillo.enable = true;
+  };
 
   environment.sessionVariables = {
     FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";

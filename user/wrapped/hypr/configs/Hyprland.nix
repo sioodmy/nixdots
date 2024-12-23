@@ -166,4 +166,16 @@ in {
       "${mod} SHIFT ALT, bracketright, movecurrentworkspacetomonitor, r"
     ]
     ++ workspaces;
+
+  layerrule = [
+    "blur, anyrun"
+    " ignorealpha 0.6, anyrun"
+  ];
+  windowrulev2 = [
+    "workspace 2, class:(firefox|librewolf|brave)"
+    "workspace 4 silent, class:(signal|vesktop)"
+    "suppressevent maximize, class:.*"
+    #"scrolltouchpad 0.1, class:^(zen|firefox|brave|chromium-browser|chrome-.*)$"
+    "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+  ];
 }
