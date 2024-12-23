@@ -102,6 +102,7 @@ in
           gopls
           prettierd
           go
+          python3
           nil
           rust-analyzer
           alejandra

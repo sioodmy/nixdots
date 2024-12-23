@@ -1,4 +1,5 @@
 pkgs: rec {
+  opacity = 0.88;
   background = "2e3440";
 
   text = "d8dee9";

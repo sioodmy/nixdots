@@ -82,7 +82,7 @@
       command = "${notify-send} -a \${app-id} -i \${app-id} \${title} \${body}";
     };
     colors = with theme; {
-      alpha = 0.95;
+      alpha = theme.opacity;
       background = background;
       foreground = text;
       bright0 = bright.background;

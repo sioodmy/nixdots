@@ -4,8 +4,8 @@
 }: let
   snowflake = builtins.fetchurl rec {
     name = "Logo-${sha256}.svg";
-    url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg";
-    sha256 = "1cifj774r4z4m856fva1mamnpnhsjl44kw3asklrc57824f5lyz3";
+    url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-white.svg";
+    sha256 = "01hhqanih2d07c8f5spjnw6b8yyfc27jbdb9yy5l0zgl3kh7vyr7";
   };
 in
   pkgs.writeText "style.css" ''
@@ -15,13 +15,9 @@ in
     }
 
     window#waybar {
-      background-color: #${theme.background};
+      background-color: transparent;
       color: #${theme.text};
-      box-shadow: 3px 2px 3px 2px #151515;
-      font-size: 13px;
-      /* transition-property: background-color; */
-      transition-property: background-color;
-      transition-duration: 0.5s;
+      opacity: 0.9;
     }
     window#waybar>box {
      padding: 1px 5px;
@@ -33,8 +29,6 @@ in
 
 
     .module{
-      border-radius: 10px;
-      background-color: #${theme.regular.background};
       padding: 0px 8px;
     }
 
@@ -48,40 +42,20 @@ in
 
     #workspaces button {
       background-color: transparent;
-      /* Use box-shadow instead of border so the text isn't offset */
-      color: #${theme.regular.blue};
       padding-left: 6px;
       margin: 0px 7px;
       font-family: JetBrains Mono Nerd Font;
-      box-shadow: inset 0 -3px transparent;
       transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
     }
 
-    #workspaces button.active {
-      color: #${theme.regular.yellow};
-      transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-    }
     #workspaces button.urgent {
       color: #${theme.regular.red};
-    }
-    #custom-vpn,
-    #network {
-      color: #${theme.regular.blue};
     }
 
     #clock {
       font-weight: 700;
       font-size: 15px;
       font-family: "Iosevka Term";
-    }
-
-    #backlight {
-      color: #${theme.regular.yellow};
-    }
-
-    #pulseaudio,
-    #battery {
-      color: #${theme.regular.green};
     }
 
     #battery.warning {
