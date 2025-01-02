@@ -21,7 +21,7 @@
     },
     "neotree": {
         "cargoLocks": null,
-        "date": "2024-11-24",
+        "date": "2024-12-31",
         "extract": null,
         "name": "neotree",
         "passthru": null,
@@ -33,11 +33,11 @@
             "name": null,
             "owner": "nvim-neo-tree",
             "repo": "neo-tree.nvim",
-            "rev": "42caaf5c3b7ca346ab278201151bb878006a6031",
-            "sha256": "sha256-3wRojpFbdjcRQPv62/mHqQgyfytTqaBcsX1X0zCNgC8=",
+            "rev": "2a0b2c5d394a280cee9444c9894582ac53098604",
+            "sha256": "sha256-S/YbF7B/B76jdf6+Yf+uCsQqQTR+Yr72JzYmQTT4KJk=",
             "type": "github"
         },
-        "version": "42caaf5c3b7ca346ab278201151bb878006a6031"
+        "version": "2a0b2c5d394a280cee9444c9894582ac53098604"
     },
     "nvim-base-16": {
         "cargoLocks": null,
@@ -61,7 +61,7 @@
     },
     "scope": {
         "cargoLocks": null,
-        "date": "2024-09-17",
+        "date": "2024-12-20",
         "extract": null,
         "name": "scope",
         "passthru": null,
@@ -73,11 +73,11 @@
             "name": null,
             "owner": "tiagovla",
             "repo": "scope.nvim",
-            "rev": "932102696ead2b7ab9ff65017767b57e2722fdde",
-            "sha256": "sha256-2eM+KXsF66ocdaV4zVHy8afgP1v+Gj85R3XBhmDORtU=",
+            "rev": "e1799fa37178382fc228245c41af5547e3f95182",
+            "sha256": "sha256-rOuEDd90dMRCa+zikTQdE+D4rpx4PFmsk8JpvjK1b7E=",
             "type": "github"
         },
-        "version": "932102696ead2b7ab9ff65017767b57e2722fdde"
+        "version": "e1799fa37178382fc228245c41af5547e3f95182"
     },
     "sixelpreview": {
         "cargoLocks": null,
@@ -98,25 +98,5 @@
             "type": "github"
         },
         "version": "6292991a005e1a367095f4d404405a626c82b49f"
-    },
-    "telescope-orgmode": {
-        "cargoLocks": null,
-        "date": "2024-08-01",
-        "extract": null,
-        "name": "telescope-orgmode",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nvim-orgmode",
-            "repo": "telescope-orgmode.nvim",
-            "rev": "2cd2ea778726c6e44429fef82f23b63197dbce1b",
-            "sha256": "sha256-yeGdy1aip4TZKp++MuSo+kxo+XhFsOT0yv+9xJpKEps=",
-            "type": "github"
-        },
-        "version": "2cd2ea778726c6e44429fef82f23b63197dbce1b"
     }
 }
