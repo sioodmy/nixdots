@@ -4,16 +4,6 @@ in {
   environment.systemPackages = attrValues {
     inherit
       (pkgs)
-      # for hyprland
-      
-      swaybg
-      hyprsunset
-      grimblast
-      ##
-      
-      wl-clipboard
-      hyprlock
-      brightnessctl
       ttyper
       librewolf
       mpv

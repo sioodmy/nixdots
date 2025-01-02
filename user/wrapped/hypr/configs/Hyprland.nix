@@ -124,6 +124,7 @@ in {
   bindr = [
     # launcher
     "${mod}, Space, exec, anyrun"
+    ", XF86Search, exec, anyrun"
   ];
   bindle = [
     # volume

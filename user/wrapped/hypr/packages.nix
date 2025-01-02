@@ -6,5 +6,6 @@ builtins.attrValues {
     grimblast
     swaybg
     hyprsunset
+    wl-clipboard
     ;
 }
