@@ -12,6 +12,9 @@ set laststatus=3
 set conceallevel=2
 set concealcursor=nc
 
+" Remove gap between nvim and tmux
+set cmdheight=0
+
 " 4 spaces tabs and indentation
 set smartindent
 set expandtab
