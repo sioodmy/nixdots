@@ -19,26 +19,6 @@
         },
         "version": "16fc9c073e3ea4175b66ad94375df6d73fc114c0"
     },
-    "neotree": {
-        "cargoLocks": null,
-        "date": "2024-12-31",
-        "extract": null,
-        "name": "neotree",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nvim-neo-tree",
-            "repo": "neo-tree.nvim",
-            "rev": "2a0b2c5d394a280cee9444c9894582ac53098604",
-            "sha256": "sha256-S/YbF7B/B76jdf6+Yf+uCsQqQTR+Yr72JzYmQTT4KJk=",
-            "type": "github"
-        },
-        "version": "2a0b2c5d394a280cee9444c9894582ac53098604"
-    },
     "nvim-base-16": {
         "cargoLocks": null,
         "date": "2024-05-23",

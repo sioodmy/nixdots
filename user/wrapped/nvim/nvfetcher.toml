@@ -1,11 +1,3 @@
-[neotree]
-src.git="https://github.com/nvim-neo-tree/neo-tree.nvim"
-fetch.github="nvim-neo-tree/neo-tree.nvim"
-
-[telescope-orgmode]
-src.git="https://github.com/nvim-orgmode/telescope-orgmode.nvim"
-fetch.github="nvim-orgmode/telescope-orgmode.nvim"
-
 [nvim-base-16]
 src.git = "https://github.com/RRethy/nvim-base16"
 fetch.github = "RRethy/nvim-base16"

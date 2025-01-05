@@ -46,11 +46,8 @@ in
       margin: 0px 7px;
       font-family: JetBrains Mono Nerd Font;
       transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
-    }
-
-    #workspaces button:hover {
       color: #${theme.text};
-    };
+    }
 
     #workspaces button.urgent {
       color: #${theme.regular.red};

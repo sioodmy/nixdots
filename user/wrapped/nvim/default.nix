@@ -53,6 +53,7 @@
           indent-blankline-nvim-lua
           nvim-autopairs
           neoformat
+          neo-tree-nvim
           comment-nvim
           nvim-colorizer-lua
           which-key-nvim

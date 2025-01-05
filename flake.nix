@@ -45,7 +45,7 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     apple-silicon-support.url = "github:tpwrules/nixos-apple-silicon";
   };
 }
