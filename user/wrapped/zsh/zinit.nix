@@ -6,8 +6,8 @@ pkgs.writeShellScriptBin ".zshrc" ''
 
   source ${pkgs.zsh-defer}/share/zsh-defer/zsh-defer.plugin.zsh
 
-  source ${./starship.zsh}
-  source ${./zoxide.zsh}
+  eval "$( ${pkgs.starship}/bin/starship init zsh )"
+  eval "$( ${pkgs.zoxide}/bin/zoxide init zsh )"
 
   source ${./config.zsh}
 
