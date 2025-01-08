@@ -1,5 +1,5 @@
 pkgs: rec {
-  opacity = 0.88;
+  opacity = 1.0;
   background = "2e3440";
 
   text = "d8dee9";
@@ -45,7 +45,10 @@ pkgs: rec {
   base0F = "B48EAD";
 
   accent = regular.blue;
-  wallpaper = ./wall.png;
+  wallpaper = let
+    path = "nord/2.png";
+    wallpapers = (pkgs.callPackages ./_sources/generated.nix {}).wallpapers;
+  in "${wallpapers.src}/${path}";
 
   bat = "Nord";
 

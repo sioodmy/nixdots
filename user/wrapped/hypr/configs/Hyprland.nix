@@ -147,7 +147,7 @@ in {
       "${mod}, P, pseudo,"
       "${mod} ALT, ,resizeactive,"
 
-      "${mod}, Return, exec, foot"
+      "${mod}, Return, exec, foot -e tmux"
       "${mod} SHIFT, L, exec, hyprlock"
 
       "${mod}, h, movefocus, l"

@@ -10,7 +10,6 @@ in {
       inherit
         (pkgs)
         ttyper
-        librewolf
         mpv
         tdesktop
         ytmdl

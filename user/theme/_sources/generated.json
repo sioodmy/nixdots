@@ -1,9 +1,9 @@
 {
-    "theme": {
+    "wallpapers": {
         "cargoLocks": null,
-        "date": "2024-06-16",
+        "date": "2025-01-08",
         "extract": null,
-        "name": "theme",
+        "name": "wallpapers",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -11,12 +11,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "andersevenrud",
-            "repo": "nordic.nvim",
-            "rev": "c88388b2a5f6e621df2718c316b856d4971bb89d",
-            "sha256": "sha256-ipmt0xD2zTfoh8fyYG4+09uVL2ef98FE9VwWpWJtQks=",
+            "owner": "sioodmy",
+            "repo": "wallpapers",
+            "rev": "762c067796b6a4fddc6b8d051e70844d1701f1b7",
+            "sha256": "sha256-Er+ZnJIcRSYmsDkFyttJN6KdDxn4PVgfrkoXgrHzFyA=",
             "type": "github"
         },
-        "version": "c88388b2a5f6e621df2718c316b856d4971bb89d"
+        "version": "762c067796b6a4fddc6b8d051e70844d1701f1b7"
     }
 }

@@ -8,5 +8,6 @@
 
     openDefaultPorts = true;
   };
+  programs.adb.enable = true;
   boot.kernel.sysctl."fs.inotify.max_user_watches" = 1048576;
 }

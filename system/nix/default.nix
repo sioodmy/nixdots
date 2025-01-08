@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  environment.systemPackages = [pkgs.nvfetcher];
   nix = {
     # gc kills ssds
     gc.automatic = false;
@@ -40,6 +41,11 @@
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       ];
     };
+  };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/sioodmy/dev/dotfiles";
   };
 
   # WE DONT WANT TO BUILD STUFF ON TMPFS
