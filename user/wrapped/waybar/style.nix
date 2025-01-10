@@ -61,10 +61,12 @@ in
 
     #battery.warning {
       color: #${theme.regular.red};
+      background-color: inherit;
     }
 
     #battery.critical:not(.charging) {
       color: #${theme.bright.red};
+      background-color: inherit;
     }
     tooltip {
       font-family: 'Lato', sans-serif;
