@@ -15,6 +15,7 @@ rec
     mako = callPackage ./wrapped/mako {inherit theme;};
     bat = callPackage ./wrapped/bat {inherit theme;};
     hypr = callPackage ./wrapped/hypr {inherit theme;};
+    zathura = callPackage ./wrapped/zathura {inherit theme;};
   };
 
   shell = pkgs:
