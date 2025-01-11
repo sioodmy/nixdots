@@ -1,5 +1,12 @@
-{pkgs, ...}: let
-  plugins = ["vim-tmux-navigator" "sensible" "nord" "yank"];
+{
+  pkgs,
+  theme,
+  ...
+}: let
+  inherit (theme) accent text;
+  black = theme.bright.background;
+  inherit (theme.regular) background;
+  plugins = ["vim-tmux-navigator" "sensible" "yank"];
   tmuxconf = pkgs.writeText "tmux.conf" ''
     set -g mouse on
 
@@ -29,6 +36,21 @@
 
     bind '"' split-window -v -c "#{pane_current_path}"
     bind % split-window -h -c "#{pane_current_path}"
+
+    set -g pane-border-style fg='#${black}'
+    set -g pane-active-border-style fg='#${accent}'
+
+    set -g status-style bg='#${background}',fg='#${text}'
+    set -g status-interval 1
+    set -g status-right-length 60
+    set-window-option -g window-status-separator ""
+    set -g status-left "#[bg=#${black}]#[fg=#${text}]"
+    set -g status-left '#[bg=#${black}]#[fg=#${text}]#{?client_prefix,#[fg=#${accent}],} 󱄅 '
+    set -ga status-left '#[bg=#${black}]#[fg=#${accent}]#{?window_zoomed_flag,   , }'
+    set -g window-status-current-format "#[bold]#[fg=#${text}]#[bg=#${accent}] #I#[nobold] #W "
+    set -g window-status-format "#[bold]#[fg=#${text}]#[bg=#${black}] #I#[nobold] #W "
+    set -g status-right '#[fg=#${text},bg=#${background}] #(${pkgs.tmux-mem-cpu-load}/bin/tmux-mem-cpu-load -g 0 -a 0 --interval 2) '
+    set -ga status-right '#[fg=#${text},bg=#${black}] %a %H:%M:%S #[fg=#${text},bg=#${accent}] %Y-%m-%d '
   '';
 in
   pkgs.symlinkJoin {

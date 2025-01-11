@@ -7,7 +7,7 @@ rec
   in {
     nvim = callPackage ./wrapped/nvim {inherit theme;};
     zsh = callPackage ./wrapped/zsh {};
-    tmux = callPackage ./wrapped/tmux {};
+    tmux = callPackage ./wrapped/tmux {inherit theme;};
     foot = callPackage ./wrapped/foot {inherit theme;};
     tofi = callPackage ./wrapped/tofi {inherit theme;};
     anyrun = callPackage ./wrapped/anyrun {inherit theme;};
