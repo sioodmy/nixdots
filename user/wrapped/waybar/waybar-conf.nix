@@ -16,8 +16,9 @@
       "custom/lock"
       "backlight"
       "battery"
+      "idle_inhibitor"
     ];
-    modules-right = ["pulseaudio" "network" "clock"];
+    modules-right = ["bluetooth" "pulseaudio" "network" "clock"];
 
     "custom/search" = {
       format = " ";
@@ -37,6 +38,19 @@
         <tt><small>{calendar}</small></tt>'';
     };
 
+    "idle_inhibitor" = {
+      format = "{icon}";
+      format-icons = {
+        activated = "";
+        deactivated = "󰔟";
+      };
+    };
+
+    bluetooth = {
+      on-click = ''
+        bash -c 'bluetoothctl power $(bluetoothctl show | grep -q "Powered: yes" && echo off || echo on)'
+      '';
+    };
     backlight = {
       format = "{icon} {percent}%";
       format-icons = ["" "" "" "" "" "" "" "" ""];
