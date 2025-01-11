@@ -18,6 +18,13 @@
       packages = [pkgs.apparmor-profiles];
     };
   };
+  # credits: poz
+  fileSystems = let
+    defaults = ["nodev" "nosuid" "noexec"];
+  in {
+    "/boot".options = defaults;
+    "/var/log".options = defaults;
+  };
   boot = {
     blacklistedKernelModules = [
       # Obscure network protocols
