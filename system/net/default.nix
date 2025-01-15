@@ -6,12 +6,11 @@
   inherit (lib) mkIf;
 in {
   networking = {
-    nameservers = ["127.0.0.1" "::1"];
+    nameservers = ["1.1.1.1" "1.0.0.1"];
     dhcpcd.extraConfig = "nohook resolv.conf";
     networkmanager = {
       enable = true;
       unmanaged = ["docker0" "rndis0"];
-      dns = "none";
       wifi = {
         macAddress = mkIf (! config.hardware.asahi.enable) "random";
         powersave = true;

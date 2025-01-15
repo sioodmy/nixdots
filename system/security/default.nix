@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   hardware.ledger.enable = true;
   services = {
     networkd-dispatcher.enable = true;
@@ -10,17 +10,17 @@
     lockKernelModules = false;
     forcePageTableIsolation = true;
     polkit.enable = true;
+    sudo.package = pkgs.sudo.override { withInsults = true; };
 
     rtkit.enable = true;
     apparmor = {
       enable = true;
       killUnconfinedConfinables = true;
-      packages = [pkgs.apparmor-profiles];
+      packages = [ pkgs.apparmor-profiles ];
     };
   };
   # credits: poz
-  fileSystems = let
-    defaults = ["nodev" "nosuid" "noexec"];
+  fileSystems = let defaults = [ "nodev" "nosuid" "noexec" ];
   in {
     "/boot".options = defaults;
     "/var/log".options = defaults;
