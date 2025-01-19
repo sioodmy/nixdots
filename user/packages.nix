@@ -12,6 +12,7 @@ in {
         ttyper
         mpv
         tdesktop
+        caprine
         ytmdl
         yt-dlp
         transmission_4-gtk
