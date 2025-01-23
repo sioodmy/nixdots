@@ -73,7 +73,7 @@ in {
 
     shadow = {
       enabled = true;
-      color = "rgba(AF1E1E2E)";
+      color = "rgba(2e2e2e2e)";
       ignore_window = true;
       offset = "2 4";
       range = 15;
