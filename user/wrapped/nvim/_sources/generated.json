@@ -39,6 +39,86 @@
         },
         "version": "6ac181b5733518040a33017dde654059cd771b7c"
     },
+    "org-bullets": {
+        "cargoLocks": null,
+        "date": "2024-09-02",
+        "extract": null,
+        "name": "org-bullets",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-orgmode",
+            "repo": "org-bullets.nvim",
+            "rev": "46ae687e22192fb806b5977d664ec98af9cf74f6",
+            "sha256": "sha256-cRcO0TDY0v9c/H5vQ1v96WiEkIhJDZkPcw+P58XNL9w=",
+            "type": "github"
+        },
+        "version": "46ae687e22192fb806b5977d664ec98af9cf74f6"
+    },
+    "org-checkbox": {
+        "cargoLocks": null,
+        "date": "2024-02-25",
+        "extract": null,
+        "name": "org-checkbox",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "massix",
+            "repo": "org-checkbox.nvim",
+            "rev": "d33464548b7c743c6ca12c3ac0712573e3964daa",
+            "sha256": "sha256-fN6zEBPPQl8eXhWugkxFp++vW/acWviKvFRr1cNcu/A=",
+            "type": "github"
+        },
+        "version": "d33464548b7c743c6ca12c3ac0712573e3964daa"
+    },
+    "org-modern": {
+        "cargoLocks": null,
+        "date": "2023-05-12",
+        "extract": null,
+        "name": "org-modern",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "danilshvalov",
+            "repo": "org-modern.nvim",
+            "rev": "c024900b7ee78a0274036025569b47001ef3e6aa",
+            "sha256": "sha256-TYs3g5CZDVXCFXuYaj3IriJ4qlIOxQgArVOzT7pqkqs=",
+            "type": "github"
+        },
+        "version": "c024900b7ee78a0274036025569b47001ef3e6aa"
+    },
+    "orgmode": {
+        "cargoLocks": null,
+        "date": "2025-01-20",
+        "extract": null,
+        "name": "orgmode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-orgmode",
+            "repo": "orgmode",
+            "rev": "7092f817ac8acfd70169c92c7c1fa4d67da00b16",
+            "sha256": "sha256-pLbjEl62R3pTxQjOH9yr/f3bF/Du/yhniAShVf5szYk=",
+            "type": "github"
+        },
+        "version": "7092f817ac8acfd70169c92c7c1fa4d67da00b16"
+    },
     "scope": {
         "cargoLocks": null,
         "date": "2024-12-20",
@@ -78,5 +158,25 @@
             "type": "github"
         },
         "version": "6292991a005e1a367095f4d404405a626c82b49f"
+    },
+    "telescope-orgmode": {
+        "cargoLocks": null,
+        "date": "2024-08-01",
+        "extract": null,
+        "name": "telescope-orgmode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-orgmode",
+            "repo": "telescope-orgmode.nvim",
+            "rev": "2cd2ea778726c6e44429fef82f23b63197dbce1b",
+            "sha256": "sha256-yeGdy1aip4TZKp++MuSo+kxo+XhFsOT0yv+9xJpKEps=",
+            "type": "github"
+        },
+        "version": "2cd2ea778726c6e44429fef82f23b63197dbce1b"
     }
 }

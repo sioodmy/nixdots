@@ -2,6 +2,26 @@
 src.git = "https://github.com/RRethy/nvim-base16"
 fetch.github = "RRethy/nvim-base16"
 
+[org-bullets]
+src.git = "https://github.com/nvim-orgmode/org-bullets.nvim"
+fetch.github = "nvim-orgmode/org-bullets.nvim"
+
+[orgmode]
+src.git = "https://github.com/nvim-orgmode/orgmode"
+fetch.github = "nvim-orgmode/orgmode"
+
+[telescope-orgmode]
+src.git = "https://github.com/nvim-orgmode/telescope-orgmode.nvim"
+fetch.github = "nvim-orgmode/telescope-orgmode.nvim"
+
+[org-modern]
+src.git = "https://github.com/danilshvalov/org-modern.nvim"
+fetch.github = "danilshvalov/org-modern.nvim"
+
+[org-checkbox]
+src.git = "https://github.com/massix/org-checkbox.nvim"
+fetch.github = "massix/org-checkbox.nvim"
+
 [incline]
 src.git = "https://github.com/b0o/incline.nvim"
 fetch.github = "b0o/incline.nvim"
