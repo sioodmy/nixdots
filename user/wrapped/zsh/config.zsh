@@ -13,7 +13,7 @@ export AUTO_NOTIFY_EXPIRE_TIME=5000
 zvm_after_init_commands+=('eval "$(fzf --zsh)"')
 
 eval "$(fzf --zsh)"
-eval "$(direnv hook zsh)"
+(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
 # Basic auto/tab complete:
 autoload -U compinit
